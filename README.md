@@ -7,6 +7,11 @@
 #### Github https://github.com/Elshaden/apiato-livewire.git
 
 #Usage
+ In Existing Apiato Application
+```
+   composer require elshaden/apiato-livewire
+
+```
 
 #### Once Installed via Composer Require  to install the container in Apiato Application
 #### [Apiato Conatainer Installer](http://apiato.io/docs/getting-started/container-installer)  for more details
