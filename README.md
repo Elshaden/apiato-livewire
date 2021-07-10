@@ -55,10 +55,13 @@ php artisan livewire:make <component name>
            @livewire('<component name>')
       </div>
     @endsection
-> ```
+```
 
 
  You now can call any Apiato Method from Livewire and have the view render the data as you wish.  
+
+The same can be done with Livewire UI Modal, which is added be default
+for more Details on Livewire UI Modal visit  https://github.com/livewire-ui/modal
    
    
     
