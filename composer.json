@@ -1,5 +1,5 @@
 {
-  "name": "apiato/livewire",
+  "name": "elshaden/apiato-livewire",
   "description": "Livewire Container for Apiato.",
     "type": "apiato-container",
     "require": {
