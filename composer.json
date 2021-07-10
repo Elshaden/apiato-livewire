@@ -1,6 +1,8 @@
 {
   "name": "elshaden/apiato-livewire",
   "description": "Livewire Container for Apiato.",
+  "keywords": ["framework", "laravel", "apiato", 'livewire'],
+  "license": "MIT",
     "type": "apiato-container",
     "require": {
 
