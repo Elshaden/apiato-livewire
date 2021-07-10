@@ -69,7 +69,7 @@ php artisan livewire:make <component name>
 
 You now can call any Apiato Method from Livewire Component and have the view render the data as you wish.  
 
-The same can be done with Livewire UI Modal, which is added be default
+The same can be done with Livewire UI Modal, which is added by default
 for more Details on Livewire UI Modal visit  https://github.com/livewire-ui/modal
    
    
