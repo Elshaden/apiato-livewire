@@ -1,4 +1,6 @@
 # [Apiato](https://github.com/apiato/apiato) Livewire Container
+# Laravel  [Livewire](https://laravel-livewire.com/)
+
 
 #### This Apiato container provides a simple and easy way toAdd Livewire to Views.
 
@@ -6,7 +8,8 @@
 
 #Usage
 
-#### Once Installed via Composer Require
+#### Once Installed via Composer Require  to install the container in Apiato Application
+#### [Apiato Conatainer Installer](http://apiato.io/docs/getting-started/container-installer)  for more details
 
 #### Run your normal  Livewire command to create new Component
 
@@ -58,7 +61,7 @@ php artisan livewire:make <component name>
 ```
 
 
- You now can call any Apiato Method from Livewire and have the view render the data as you wish.  
+You now can call any Apiato Method from Livewire Component and have the view render the data as you wish.  
 
 The same can be done with Livewire UI Modal, which is added be default
 for more Details on Livewire UI Modal visit  https://github.com/livewire-ui/modal
