@@ -13,6 +13,7 @@
 
         @stack('styles')
         <!-- Styles -->
+
             @livewireStyles
         </head>
 
