@@ -11,20 +11,21 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <!-- Styles -->
-    @livewireStyles
-</head>
+        @stack('styles')
+        <!-- Styles -->
+            @livewireStyles
+        </head>
 
-<body >
+        <body class="font-body antialiased ">
+
+        @yield('content')
 
 
-@yield('content')
+        @livewire('livewire-ui-modal')
+        @livewireUIScripts
+        @livewireScripts
 
-
-@livewire('livewire-ui-modal')
-@livewireUIScripts
-@livewireScripts
-
+        @stack('scripts')
 
 </body>
 </html>
