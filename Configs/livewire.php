@@ -38,7 +38,7 @@ return [
     |
     */
 
-    'view' =>'appSection@livewire::' ,
+    'view' =>'livewire@livewire::' ,
     /*
     |--------------------------------------------------------------------------
     | Layout
