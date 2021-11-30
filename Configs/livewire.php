@@ -16,7 +16,7 @@ return [
     */
 
    # 'class_namespace' => 'App\\Http\\Livewire',
-    'class_namespace' =>'App\\Containers\\AppSection\\Livewire\\Http' ,
+    'class_namespace' =>'App\\Containers\\Livewire\\Http' ,
     /*
     |--------------------------------------------------------------------------
     | View Path
@@ -26,7 +26,7 @@ return [
     | file manipulation helper commands like `artisan make:livewire`.
     |
     */
-    'view_path' => app_path('Containers\\AppSection\\Livewire\\UI\\WEB\\Views'),
+    'view_path' => app_path('Containers\\Livewire\\UI\\WEB\\Views'),
 
       /*
     |--------------------------------------------------------------------------
