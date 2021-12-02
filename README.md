@@ -12,8 +12,8 @@
 Well, if you are familiar with Apiato, you would know that Apiato uses the DDD pattern, Domain Driven Design,
 this will make your code very well organized, easily maintainable, and most important,
 simple to have many developers work on the same application.
-While, the makers of Apiato, insist that it is mainly focused on API backend, I disagree, Apiato can handle both Web application as a frontend and at the same time 
-deliver flawless API backend, and that is the butty of Apiato, you have the same functionality for both realms.
+While, the makers of Apiato, insist that it is mainly focused on API backend, I disagree, Apiato can handle both Web application as a frontend, and at the same time 
+deliver flawless API backend.
 
 _Don't take my word for it..  Go on and give a test run..._
 
@@ -40,7 +40,9 @@ php artisan apiato:generate:container:livewire
 - for Section enter Livewire or just enter, the system will create under the Livewire section regardless.
 - for File name just click enter leave as is
 - for the Container  Enter the name of the Container, Not to be confused with the Component, this is just like any other Apiato Container
-- the Component , that is your desired Livewire Component , you can use dots to define sub folders within the same Container
+- the Component , that is your desired Livewire Component , you can use dots to define subfolders within the same Container
+
+#### Now you can use Livewire as Web frontend with Livewire, and all the classes of Apiato at your disposal.
 
 
 
