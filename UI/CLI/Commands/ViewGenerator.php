@@ -4,9 +4,10 @@ namespace App\Containers\Vendor\Livewire\UI\CLI\Commands;
 
 use Apiato\Core\Generator\GeneratorCommand;
 use Apiato\Core\Generator\Interfaces\ComponentsGenerator;
+use App\Containers\Vendor\Livewire\Generators\ExtendedGeneratorCommand;
 use Illuminate\Support\Str;
 
-class ViewGenerator extends GeneratorCommand implements ComponentsGenerator
+class ViewGenerator extends ExtendedGeneratorCommand implements ComponentsGenerator
 {
     /**
      * User required/optional inputs expected to be passed while calling the command.

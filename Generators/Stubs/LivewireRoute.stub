@@ -1,0 +1,9 @@
+<?php
+
+use App\Containers\{{section-name}}\{{container-name}}{{classes}};
+use Illuminate\Support\Facades\Route;
+
+Route::{{http-verb}}('{{endpoint-url}}', [{{main_class}}::class, '__invoke'])
+    ->name('{{route-name}}')
+    ->middleware(['auth:{{auth-middleware}}']);
+

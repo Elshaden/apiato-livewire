@@ -4,10 +4,11 @@ namespace App\Containers\Vendor\Livewire\UI\CLI\Commands;
 
 use Apiato\Core\Generator\GeneratorCommand;
 use Apiato\Core\Generator\Interfaces\ComponentsGenerator;
+use App\Containers\Vendor\Livewire\Generators\ExtendedGeneratorCommand;
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputOption;
 
-class RouteGenerator extends GeneratorCommand implements ComponentsGenerator
+class RouteGenerator extends ExtendedGeneratorCommand implements ComponentsGenerator
 {
     /**
      * User required/optional inputs expected to be passed while calling the command.
@@ -70,6 +71,20 @@ class RouteGenerator extends GeneratorCommand implements ComponentsGenerator
 
         $routeName = Str::lower($ui . '_' . $this->containerName . '_' . Str::snake($operation));
 
+        if(Str::contains($operation, '.')) {
+               $SplitDirs = explode('.', $operation)  ;
+                $Classes = '' ;
+               foreach ($SplitDirs as $Path){
+
+                   $Classes.=  '\\' .Str::title($Path) ;
+               }
+
+               $MainClass = Str::title($Path);
+
+        }   else{
+            $Classes = '\\'.Str::title($operation) ;
+            $MainClass = Str::title($operation);
+        }
         // Change the stub to the currently selected UI (API / WEB)
         $this->stubName = 'LivewireRoute.stub';
 
@@ -93,11 +108,14 @@ class RouteGenerator extends GeneratorCommand implements ComponentsGenerator
                 'doc-http-verb' => Str::upper($verb),
                 'route-name' => $routeName,
                 'auth-middleware' => Str::lower($ui),
+                'classes'=> $Classes,
+                'main_class'=>$MainClass,
             ],
             'file-parameters' => [
                 'endpoint-name' => $this->fileName,
                 'endpoint-version' => 'v' . $version,
                 'documentation-type' => $doctype,
+
             ],
         ];
     }

@@ -4,13 +4,18 @@ namespace App\Containers\Vendor\Livewire\UI\CLI\Commands;
 
 use Apiato\Core\Generator\GeneratorCommand;
 use Apiato\Core\Generator\Interfaces\ComponentsGenerator;
+use App\Containers\Vendor\Livewire\Generators\ExtendedGeneratorCommand;
+use Illuminate\Filesystem\Filesystem as IlluminateFilesystem;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Pluralizer;
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputOption;
 
-class ContainerLivewireGenerator extends GeneratorCommand implements ComponentsGenerator
+class ContainerLivewireGenerator extends ExtendedGeneratorCommand implements ComponentsGenerator
 {
+
+
+
     /**
      * User required/optional inputs expected to be passed while calling the command.
      * This is a replacement of the `getArguments` function "which reads whenever it's called".
@@ -66,6 +71,7 @@ class ContainerLivewireGenerator extends GeneratorCommand implements ComponentsG
         $ui = 'web';
 
 
+
         // container name as inputted and lower
         $containerName = $this->containerName;
         $_containerName = Str::lower($this->containerName);
@@ -80,6 +86,7 @@ class ContainerLivewireGenerator extends GeneratorCommand implements ComponentsG
             '--quite'
         ]);
 
+        $routeFixed =
 
         // add the View file
         $this->printInfoMessage('Generating View File');
@@ -135,9 +142,9 @@ class ContainerLivewireGenerator extends GeneratorCommand implements ComponentsG
 
             '--section' => 'Livewire',
             '--container' => $containerName,
-            '--file' => Str::lower($component_name),
+            '--file' => str_replace(  '.', '-'  ,$component_name),
             '--ui' => $ui,
-            '--operation' => $component_name,
+            '--operation' =>$component_name,
             '--doctype' => $doctype,
             '--docversion' => $version,
             '--url' => $url,
