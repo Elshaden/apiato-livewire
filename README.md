@@ -29,7 +29,8 @@ php artisan apiato:generate:container:livewire
 #### you will be prompted to enter the Details of the Component
 - for Section enter Livewire or just enter, the system will create under the Livewire section regardless.
 - for File name just click enter leave as is
-- for the Container
+- for the Container  Enter the name of the Container, Not to be confused with the Component, this is just like any other Apiato Container
+- the Component , that is your desired Livewire Component , you can use dots to define sub folders within the same Container
 
 
 
