@@ -3,9 +3,19 @@
 # Laravel  [Livewire](https://laravel-livewire.com/)
 
 
-#### This Apiato container provides a simple and easy way toAdd Livewire to Views.
+#### This Apiato container provides a simple and easy way to add Livewire to Views.
 
 #### Github https://github.com/Elshaden/apiato-livewire.git
+   
+
+### Why would anyone use an API  Backend  for a Frontend application?
+Well, if you are familiar with Apiato, you would know that Apiato uses the DDD pattern, Domain Driven Design,
+this will make your code very well organized, easily maintainable, and most important,
+simple to have many developers work on the same application.
+While, the makers of Apiato, insist that it is mainly focused on API backend, I disagree, Apiato can handle both Web application as a frontend and at the same time 
+deliver flawless API backend, and that is the butty of Apiato, you have the same functionality for both realms.
+
+_Don't take my word for it..  Go on and give a test run..._
 
 #Usage
 
