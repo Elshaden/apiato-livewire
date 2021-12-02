@@ -23,10 +23,21 @@
 
 
 `
-php artisan livewire:make <component name>
+php artisan apiato:generate:container:livewire
+
 `
 
-#### This will create a Folder in the AppSection called  Livewire
+#### This will create a new section called  Livewire
+
+
+  
+     
+
+
+
+
+
+
 #### usual Livewire Class and View will be created in this folder
 
 ### You must change  the render method in the Livewire Component Class   from

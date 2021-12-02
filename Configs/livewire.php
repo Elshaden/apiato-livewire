@@ -16,7 +16,7 @@ return [
     */
 
    # 'class_namespace' => 'App\\Http\\Livewire',
-    'class_namespace' =>'App\\Containers\\Livewire\\Http' ,
+    'class_namespace' =>'App\\Containers\\Livewire' ,
     /*
     |--------------------------------------------------------------------------
     | View Path
@@ -26,8 +26,9 @@ return [
     | file manipulation helper commands like `artisan make:livewire`.
     |
     */
-    'view_path' => app_path('Containers\\Livewire\\UI\\WEB\\Views'),
-
+  //  'view_path' =>'app/Containers/Livewire/UI/WEB/Views',
+    'view_path' =>'app/Containers/Vendor/Livewire/TempViews',
+  //  resource_path('views/livewire'),
       /*
     |--------------------------------------------------------------------------
     | Render View
@@ -38,7 +39,7 @@ return [
     |
     */
 
-    'view' =>'livewire@livewire::' ,
+    'view' =>'livewire@folder::' ,
     /*
     |--------------------------------------------------------------------------
     | Layout
@@ -103,7 +104,7 @@ return [
         ],
         'max_upload_time' => 5, // Max duration (in minutes) before an upload gets invalidated.
     ],
-
+     // $this->loadRoutesFrom("{$this->package->basePath('/../routes/')}{$routeFileName}.php");
     /*
     |--------------------------------------------------------------------------
     | Manifest File Path

@@ -1,0 +1,10 @@
+<div>
+
+            <x-livewire-master >
+
+                <x-divider >
+                     Create Your  View Here  Have Funn
+                </x-divider>
+
+            </x-livewire-master>
+</div>

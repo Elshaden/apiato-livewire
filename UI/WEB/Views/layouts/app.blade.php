@@ -18,12 +18,10 @@
         </head>
 
         <body class="font-body antialiased ">
-
         @yield('content')
 
 
         @livewire('livewire-ui-modal')
-        @livewireUIScripts
         @livewireScripts
 
         @stack('scripts')
