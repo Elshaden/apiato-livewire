@@ -36,23 +36,23 @@ php artisan apiato:generate:container:livewire
 
 #### This will create a new section called  Livewire
 - app
- - Containers
- - AppSection
- - **Livewire**
+- Containers
+- AppSection
+- **Livewire**
   - Configs
   - Providers
   - UI
-   - WEB
-   - Routes
-   - Views
- - <LivewireComponent1 / Or Livewire Component Dir1 >
- - <LivewireComponent2 / Or Livewire Component Dir2 >
+    - WEB
+    - Routes
+    - Views
+  - <LivewireComponent1 / Or Livewire Component Dir1 >
+  - <LivewireComponent2 / Or Livewire Component Dir2 >
 
- - Vendor
-  - ...
-  - Livewire
-  - ...
-    `
+- Vendor
+- ...
+- Livewire
+- ...
+  `
 
 #### usual Livewire Class and View will be created in these folders
 
