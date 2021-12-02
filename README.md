@@ -79,7 +79,15 @@ The View Must Extend layouts.app
 `@extends('vendor@livewire::layouts.app')`
 
 In this view you must call the related Livewrie Component in the @section('content')   
-``` @section('content') <div> @livewire('<component name>') </div> @endsection```
+```
+@section('content')
+
+<div>
+@livewire('<component name>') 
+</div>
+@endsection
+
+```
 
 ### Blade Components
 You can Create your own Blade Component and use them in the views
