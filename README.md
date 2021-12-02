@@ -1,3 +1,4 @@
+
 # [Apiato](https://github.com/apiato/apiato) Livewire Container
 # Laravel  [Livewire](https://laravel-livewire.com/)
 
@@ -8,87 +9,72 @@
 
 #Usage
 
- In Existing Apiato Application
-```
-   composer require elshaden/apiato-livewire
+In Existing Apiato Application
+```  
+composer require elshaden/apiato-livewire 
 
-```
+```  
+
 
 #### Once Installed via Composer Require  to install the container in Apiato Application
-#### [Apiato Conatainer Installer](http://apiato.io/docs/getting-started/container-installer)  for more details
+#### [Apiato Container Installer](http://apiato.io/docs/getting-started/container-installer)  for more details
 
-#### Run your normal  Livewire command to create new Component
-
-#### Ideally it should conform to your Apiato File Structure for example the user component should be called  user.user
-
+#### To Create a new Livewire Component   V4
+#### V4 uses an Apiato Generator, which will make all necessary boilerplate.
 
 `
 php artisan apiato:generate:container:livewire
-
 `
 
+#### you will be prompted to enter the Details of the Component
+- for Section enter Livewire or just enter, the system will create under the Livewire section regardless.
+- for File name just click enter leave as is
+- for the Container
+
+
+
+
 #### This will create a new section called  Livewire
+- app
+ - Containers
+ - AppSection
+ - **Livewire**
+  - Configs
+  - Providers
+  - UI
+   - WEB
+   - Routes
+   - Views
+ - <LivewireComponent1 / Or Livewire Component Dir1 >
+ - <LivewireComponent2 / Or Livewire Component Dir2 >
+
+ - Vendor
+  - ...
+  - Livewire
+  - ...
+    `
+
+#### usual Livewire Class and View will be created in these folders
+
+### You must change  the render method in the Livewire Component Class
+
+```  
+ public function render() {  
+		 return view('livewire@<ContainerName>::component');  
+ }
+ ```  
 
 
-  
-     
+### Views
+The View Must Extend layouts.app   
+`@extends('vendor@livewire::layouts.app')`
 
+In this view you must call the related Livewrie Component in the @section('content')   
+``` @section('content') <div> @livewire('<component name>') </div> @endsection```
 
+### Blade Components
+You can Create your own Blade Component and use them in the views
+you have to register all of them in the Main service provider in the container.
 
-
-
-
-#### usual Livewire Class and View will be created in this folder
-
-### You must change  the render method in the Livewire Component Class   from
-
-```
-    public function render()
-    {
-
-             return view('livewire.<component name>');
-
-    }
-```
-### To
-
-```
-    public function render()
-    {
-            return view(config('livewire.view').'<component name>');
-    }
-```
-      
-
-#### To integrate with Apiato Controller
-  In the controller you must create a method call it Livewire or anything you want  which you call from related route
-
- the method returns normal Apiato view from the container/UI/WEB/Views.
-
- The View Must Extend layouts.app 
- `@extends('vendor@livewire::layouts.app')`
-
- In this view you must call the related Livewrie Component in the @section('content') 
- ```
-    @section('content')
-      <div>
-           @livewire('<component name>')
-      </div>
-    @endsection
-```
-
-
-You now can call any Apiato Method from Livewire Component and have the view render the data as you wish.  
-
-The same can be done with Livewire UI Modal, which is added by default
+The same can be done with Livewire UI Modal, which is added by default  
 for more Details on Livewire UI Modal visit  https://github.com/livewire-ui/modal
-   
-   
-    
-
-
-
-
-
-
-
