@@ -42,10 +42,6 @@ php artisan apiato:generate:container:livewire
 - for the Container  Enter the name of the Container, Not to be confused with the Component, this is just like any other Apiato Container
 - the Component , that is your desired Livewire Component , you can use dots to define subfolders within the same Container
 
-#### Now you can use Livewire as Web frontend with Livewire, and all the classes of Apiato at your disposal.
-
-
-
 
 #### This will create a new section called  Livewire
 - app
@@ -91,3 +87,7 @@ you have to register all of them in the Main service provider in the container.
 
 The same can be done with Livewire UI Modal, which is added by default  
 for more Details on Livewire UI Modal visit  https://github.com/livewire-ui/modal
+
+#### Now you can use Livewire as Web frontend with Livewire, and all the classes of Apiato at your disposal.
+
+
