@@ -2,9 +2,9 @@
 
             <x-livewire-master >
 
-                <x-divider >
-                     Create Your  View Here  Have Funn
-                </x-divider>
+
+                     Create Your  View Here,   Have Fun
+
 
             </x-livewire-master>
 </div>
