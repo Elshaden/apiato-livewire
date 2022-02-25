@@ -86,7 +86,7 @@ class ContainerLivewireGenerator extends ExtendedGeneratorCommand implements Com
             '--quite'
         ]);
 
-
+        $routeFixed =
 
         // add the View file
         $this->printInfoMessage('Generating View File');
@@ -112,7 +112,7 @@ class ContainerLivewireGenerator extends ExtendedGeneratorCommand implements Com
             '--section' => 'Livewire',
             '--container' => $containerName,
             '--file' => 'MainServiceProvider',
-            '--stub' => 'livewireserviceprovider',
+            '--stub' => 'mainserviceprovider',
         ]);
 
         // create the default routes for this container
